@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{STARTUP_NAME}} - Build Faster with AI</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --bg-soft: #121936;
+      --text: #e8ecff;
+      --muted: #a9b1d6;
+      --primary: #7c5cff;
+      --secondary: #00d4ff;
+      --card: #151d3f;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Inter, Segoe UI, Arial, sans-serif;
+      background: radial-gradient(circle at top right, #1d2a64, var(--bg));
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container { width: min(1100px, 92%); margin: 0 auto; position: relative; }
+    .container::before {
+      content: "";
+      position: absolute;
+      inset: 80px -40px auto -40px;
+      height: 320px;
+      background: radial-gradient(circle at center, rgba(0, 212, 255, 0.14), transparent 70%);
+      pointer-events: none;
+      z-index: -1;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 0;
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+    .brand { font-weight: 800; letter-spacing: 0.4px; font-size: 1.1rem; }
+    .hero { padding: 5.2rem 0 3.5rem; text-align: center; }
+    .badge {
+      display: inline-block;
+      background: rgba(124, 92, 255, 0.18);
+      border: 1px solid rgba(124, 92, 255, 0.45);
+      color: #d4ccff;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      margin-bottom: 1rem;
+    }
+    h1 { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 1rem; }
+    .sub { color: var(--muted); max-width: 760px; margin: 0 auto 1.5rem; font-size: 1.08rem; }
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: #fff;
+      padding: 0.88rem 1.35rem;
+      border-radius: 12px;
+      font-weight: 700;
+      box-shadow: 0 12px 30px rgba(66, 126, 255, 0.32);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 34px rgba(66, 126, 255, 0.42);
+      filter: brightness(1.05);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.15rem;
+      margin: 2.4rem 0 4rem;
+    }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.018));
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 14px;
+      padding: 1.15rem;
+      box-shadow: 0 12px 28px rgba(5, 8, 20, 0.44);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(124, 92, 255, 0.45);
+    }
+    .card h3 { margin-bottom: 0.35rem; }
+    .card p { color: var(--muted); font-size: 0.95rem; }
+    footer { border-top: 1px solid rgba(255,255,255,0.09); padding: 1rem 0 2rem; color: var(--muted); font-size: 0.9rem; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="nav">
+      <div class="brand">{{STARTUP_NAME}}</div>
+      <a href="#cta" class="btn">Get Started</a>
+    </nav>
+    <section class="hero">
+      <span class="badge">Modern AI Product</span>
+      <h1>{{HEADLINE}}</h1>
+      <p class="sub">{{SUBHEADLINE}}</p>
+      <a class="btn" id="cta" href="#features">Join Waitlist</a>
+    </section>
+    <section id="features" class="grid">
+      <article class="card"><h3>{{FEATURE_1_TITLE}}</h3><p>{{FEATURE_1_DESC}}</p></article>
+      <article class="card"><h3>{{FEATURE_2_TITLE}}</h3><p>{{FEATURE_2_DESC}}</p></article>
+      <article class="card"><h3>{{FEATURE_3_TITLE}}</h3><p>{{FEATURE_3_DESC}}</p></article>
+      <article class="card"><h3>{{FEATURE_4_TITLE}}</h3><p>{{FEATURE_4_DESC}}</p></article>
+    </section>
+    <footer>Built for modern teams by {{STARTUP_NAME}}.</footer>
+  </div>
+</body>
+</html>
